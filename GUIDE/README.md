@@ -56,6 +56,22 @@ Model/User.js
 ---------------------------------------------------
 
 
+Model/comment.js
+
+note:
+ |  type     |     String
+ |  require  |     Boolean
+author:
+ |  type     |     mongoose.Schema.Types.ObjectId, //single User
+ |  ref      |     'User' // string value from the model creation
+
+
+
+
+
+---------------------------------------------------
+
+
 
 ![](imgplanproj2/first.JPEG)
 ![](imgplanproj2/fourth.JPEG)
