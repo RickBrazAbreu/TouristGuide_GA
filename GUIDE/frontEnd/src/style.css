@@ -1,0 +1,99 @@
+*{
+    box-sizing:  border-box;
+}
+html{
+    font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+}
+
+body{
+    height: 100vh;
+    font: 1.6rem Helvetica, Arial;
+    margin: 0;
+    background-color: rgb(239, 231, 221);
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: #175c81 ; /*color on top of name when pass the mouse over it*/
+}
+
+.grid-container{
+    /* background-color: aquamarine; */
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer' ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+header{
+    grid-area:  header;
+    background-color: #203040;
+    color:  #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+header a {
+    color: white;
+    font-weight: bold;
+    text-decoration:  none; /* here remove the line on the bottom*/
+}
+header a:hover{
+    color: #8ff040;
+}
+
+.brand a {
+    font-size: 3rem;
+}
+footer{
+    background-color: #203040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.places{
+    display:flex; /*lado a lado side by side*/
+    flex-wrap: wrap; /*here make it retrair depende do tamahno da tela faz compactar*/
+    list-style-type: none ;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+.places li{
+    flex:  0 1 30rem;
+    margin: 1rem;
+    margin-bottom:  0;
+    height:  42rem;
+    border-top:  0.2rem #e0e0e0 solid;
+}
+.place {
+    display: flex;
+    flex-direction:  column;
+    justify-content:  space-around;
+    height: 100%;
+}
+.place img{
+    max-height: 26rem;
+    max-width:  22rem;
+    margin-top: 2rem ;
+}
+.place-name{
+    line-height: 2.2rem;
+}
+.place-brand{
+    font-size:  1.2rem;
+    color: #808080;
+}
+
+
+/* img{
+    height: 25rem;
+    width: 35rem;
+} */
